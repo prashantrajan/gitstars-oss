@@ -1,0 +1,21 @@
+- cache(['v1', 'tags/_widget_related_tags'], :expires_in => 1.day) do
+  -# remove class '.coming-soon' and '.placeholder' markup once the feature is ready
+  -# remove all 'javascript:void(0);' values and replace with a dynamic one
+
+  .widget.coming-soon
+    .placeholder
+      %p COMING SOON
+
+    .widget-header
+      %h2 RELATED TAGS
+
+    .widget-content
+      -# Show related tags. The markup is the same with
+      -# the mini tags shown on a user profile repo list
+      %ol.tags.mini.clearfix
+        %li.tags
+          %a{:href => "javascript:void(0);"}
+            %strong coming
+        %li.tags
+          %a{:href => "javascript:void(0);"}
+            %strong soon

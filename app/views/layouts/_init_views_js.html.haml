@@ -1,0 +1,13 @@
+- the_controller = controller_name_for_js
+- init_action_name = "init_#{action_name_for_js}".camelize(:lower)
+- is_admin_view = the_controller.split('.')[0] == 'admin' ? true : false
+
+:javascript
+  $(document).ready(function() {
+    gitstars.init();
+    #{'gitstars.views.admin.init();' if is_admin_view}
+    if (!!gitstars.views.#{the_controller}) {
+      if (!!gitstars.views.#{the_controller}.init) { gitstars.views.#{the_controller}.init(); }
+      if (!!gitstars.views.#{the_controller}.#{init_action_name}) { gitstars.views.#{the_controller}.#{init_action_name}(); }
+    }
+  });

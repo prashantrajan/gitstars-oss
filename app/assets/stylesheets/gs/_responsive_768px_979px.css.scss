@@ -1,0 +1,144 @@
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  // Body and structure
+  body {
+    padding-top: 0;
+  }
+
+  // Navbar
+  .navbar-fixed-top {
+    margin-bottom: 0;
+    position: relative;
+
+    .navbar-inner {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  // Extended: Filter-repos
+  .widget.filter-repos {
+    .btn {
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+
+  // Extended UI Block - User Profile
+  .ui-block.profile-info {
+    .ui-thumbnail {
+      float: none;
+      margin-bottom: 5px;
+      margin-right: 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // Kudos
+  // -------------------------------
+
+  // Temporary Kudos Placeholder
+  .kudos {
+    .fixed {
+      text-align: center;
+    }
+  }
+
+  .kudos-button {
+    font-size: 38px;
+    height: 64px;
+    width: 64px;
+
+    .figure {
+      height: 50px;
+      line-height: 52px;
+      text-indent: -5px;
+      width: 50px;
+
+      .star {
+        font-size: 20px;
+        right: 6px;
+        top: 20px;
+      }
+    }
+  }
+
+  .kudos-score {
+    display: block;
+    position: relative;
+    top: 2px;
+
+    .num {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+    .copy {
+      font-size: 12px;
+    }
+  }
+
+
+  // Prelogin
+
+  .home.pre-login {
+    // hero blocks
+    .blocks {
+      padding: 0;
+
+      p {
+        font-size: $baseFontSize;
+        line-height: $baseLineHeight;
+      }
+    }
+  }
+
+  // Extended: Mega Search Form
+  // ------------------------------
+  .mega-search {
+    // Extended for jQuery Token Input
+    ul.token-input-list-gitstars {
+      width: 304px;
+    }
+    .form-search {
+      .search-query {
+        width: 316px;
+      }
+    }
+  }
+
+  // Extended: Mini Search
+  // ------------------------------
+  .navbar {
+    .mini-search {
+      display: block;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+
+      .form-search {
+        border-right: 0;
+        margin: 10px 0 10px;
+        padding-right: 0;
+        border-left: 0;
+        padding-left: 0;
+        .btn-search {
+          right: 0;
+        }
+
+        // Extended for jQuery Token Input
+        ul.token-input-list-gitstars {
+          width: 100%;
+          -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+- cache(['v1', 'home/_intro'], :expires_in => 1.day) do
+  .hero-unit.bordered
+    %h1 GitStars is shutting down on October 1st, 2012.
+
+
+    %h2
+      GitHub has improved their #{link_to('starring', 'https://github.com/stars')} functionality.
+
+
+    -#= link_to_github_signin(:class => 'btn btn-primary signin') do
+    -#  %i.icon.icon-sprite.icon-ctasignin
+    -#  Sign in with
+    -#  %strong GitHub
+
+  -#.hero-unit.blurbs
+  -#  .row
+  -#    .span4
+  -#      .blocks
+  -#        %i.icon.icon-discover
+  -#        %h2.title
+  -#          Manage
+  -#        %p
+  -#          A better way to organize your starred repositories
+  -#    .span4
+  -#      .blocks
+  -#        %i.icon.icon-toolbox
+  -#        %h2.title
+  -#          Toolbox
+  -#        %p
+  -#          A toolbox for when you need to know your options - Language and Platform agnostic
+  -#    .span4
+  -#      .blocks
+  -#        %i.icon.icon-kudos
+  -#        %h2.title
+  -#          Kudos
+  -#        %p
+  -#          A way for you to show your appreciation to open source contributors

@@ -1,0 +1,25 @@
+%header
+  .container
+    %h1.page-title
+      = link_to(user_path(user), :title => user.login) do
+        %span.txt= user.login
+
+%section.user-lists
+  .container
+    .row
+      .span9
+        .widget
+          .widget-header
+            = render 'users/tab_menu', :current_tab => widget_name, :user => user
+          .widget-content
+            = widget_content
+
+        - if repos_widget?(widget_name)
+          = paginate(repos, :params => {:controller => 'users', :action => 'show'})
+
+      .span3
+        = render 'users/widget_profile_info', :user => user
+        - if repos_widget?(widget_name)
+          = render 'users/widget_tags', :user => user, :tags => tags, :show_tag_count => false
+        = render 'users/widget_kudos'
+        -#= render 'users/widget_ad_unit'

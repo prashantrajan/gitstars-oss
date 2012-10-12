@@ -1,0 +1,20 @@
+%div{"data-content-key" => "tag-list-for-repo-#{repo.id}"}
+  .tags-wrapper
+    %ol.tags.mini.clearfix
+      - tags.each do |tag|
+        %li.tags
+          = render 'tags/tag', :user => page_owner, :tag => tag, :show_tag_count => false
+
+
+    -  if current_user_is_owner?(page_owner)
+      = link_to('#', :class => 'edit-tags') do
+        %i.icon-edit-tags
+        Edit
+
+      .edit-tags-form.clearfix.hide
+        = simple_form_for(repo_user, :remote => true) do |f|
+          = f.input :tag_tokens, :label => false,
+            :input_html => {:data => { 'remote-url' => names_user_tags_path(page_owner, :format => :json), 'load' => tags } }
+          .form-action
+            = f.submit 'Save','data-disable-with' => t(:saving_ellipsis), :class => 'btn btn-primary btn-mini'
+            = link_to('Cancel', '#', :class => 'lnk-cancel')

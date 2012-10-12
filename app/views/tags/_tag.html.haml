@@ -1,0 +1,5 @@
+- url = user.present? ? user_tag_path(user, tag) : tag_path(tag)
+= link_to(url) do
+  %strong= tag.name
+  - if show_tag_count
+    %em x,xxx

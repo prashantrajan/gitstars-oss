@@ -1,0 +1,15 @@
+- unless user_signed_in?
+  %section.prod-intro
+    .container
+      = render 'home/intro'
+
+%section.discover
+  .container
+    .row
+      .span8
+        .mega-search
+          = render 'tags/search_form'
+        = render 'home/widget_browse_tags', :tags => @tags
+      .span4
+        = render 'home/widget_public_activity'
+        -#= render 'home/widget_filter_repos_form'

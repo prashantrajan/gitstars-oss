@@ -1,0 +1,15 @@
+-# remove class '.coming-soon' and '.placeholder' markup once the feature is ready
+-# remove all 'javascript:void(0);' values and replace with a dynamic one
+
+.widget.kudos.coming-soon
+  .widget-content
+    .placeholder
+      %p COMING SOON
+    .fixed
+      %a.kudos-button{:href => 'javascript:void(0);'}
+        %div.figure
+          K
+          %span.star *
+      %a.kudos-score{:href => 'javascript:void(0);'}
+        %span.num X
+        %span.title Kudos

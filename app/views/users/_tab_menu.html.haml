@@ -1,0 +1,5 @@
+%ul.nav.nav-tabs
+  %li{:class => activate_tab(t(:repositories), current_tab)}
+    = link_to(t(:repositories), user_path(user))
+  %li{:class => activate_tab(t(:tags), current_tab)}
+    = link_to(t(:tags), user_tags_path(user))

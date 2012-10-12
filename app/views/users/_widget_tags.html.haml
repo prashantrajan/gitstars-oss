@@ -1,0 +1,14 @@
+- cache(['v1', 'users/_widget_tags', user], :expires_in => 1.hour) do
+  .widget
+    .widget-header
+      %h2
+        TAGS
+        = link_to(user_tags_path(user), :class => 'view-tags pull-right') do
+          View all
+          %i.icon-sprite.icon-arrow-right
+
+    .widget-content
+      %ol.tags.mini.clearfix
+        - tags.each do |tag|
+          %li.tags
+            = render 'tags/tag', :user => user, :tag => tag, :show_tag_count => show_tag_count

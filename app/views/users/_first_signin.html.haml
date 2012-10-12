@@ -1,0 +1,19 @@
+%header#first-signin{:data => { 'remote-url' => latest_repos_user_path(user) } }
+  .container
+    %h1.page-title
+      %span.txt= user.login
+
+%section.user-lists
+  .container
+    .row
+      .span9
+        .widget
+          .widget-content
+            .loader-wrapper.first-time
+              .loader.loader-big
+                %i.icon-loader
+                Fetching Repositories
+
+      .span3
+        = render 'users/widget_profile_info', :user => user
+        = render 'users/widget_kudos'

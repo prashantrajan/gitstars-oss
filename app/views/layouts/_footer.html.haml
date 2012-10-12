@@ -1,0 +1,23 @@
+- cache(['v1', 'layouts/_footer'], :expires_in => 1.day) do
+  .row
+    .span9
+      %div.colophon
+        %ul.footer-nav
+          %li= link_to('Feedback', 'http://gitstars.uservoice.com/forums/174625-gitstars-feedback', :title => 'Send us your feedback', :target => '_blank')
+          %li.last= mail_to('support@gitstars.com', 'Email Support')
+        %p.about
+          A fun experiment by
+          #{link_to('@omor', 'https://twitter.com/omor', :title => 'Oscar Moreno', :target => '_blank')},
+          #{link_to('@prashantrajan', 'https://twitter.com/prashantrajan', :title => 'Prashant Nadarajan', :target => '_blank')} and
+          #{link_to('@andrewabogado', 'https://twitter.com/andrewabogado', :title => 'Andrew Abogado', :target => '_blank')}.
+        %p
+          GitStars is not affiliated with #{link_to('GitHub', 'https://github.com/', :target => '_blank')}, which is a trademark of #{link_to('GitHub, Inc', 'https://github.com/', :target => '_blank')}.
+          %br
+          Copyright &copy; 2012 GitStars. All rights reserved.
+
+      %p.backtotop
+        %a{:href => '#', :title => 'Back to top'} Back to top
+
+    .span3
+      %p.pull-right
+        %strong.brand GitStars

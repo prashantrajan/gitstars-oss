@@ -1,0 +1,42 @@
+- cache(['v1', 'users/_widget_profile_info', user]) do
+  .widget.narrow
+    -#.widget-header
+    -#  %h2 About
+
+    .widget-content
+      .ui-block.profile-info.clearfix
+        %strong.ui-thumbnail
+          = image_tag(user.gravatar_url(:s => 300), :alt => user.name)
+        .ui-block-body
+          %h3.username
+            = link_to(user.login, user_path(user))
+          %p.fullname
+            = user.name
+
+      %ul.lists.user-details.bleed
+        - if user.company.present?
+          %li.list.user-workplace
+            %i.icon.icon-briefcase{:title => 'Company'}
+            %span.companyname= user.company
+        - if user.location.present?
+          %li.list.user-town
+            %i.icon.icon-home{:title => 'Location'}
+            %span.location= user.location
+        -#- if user.blog_url.present?
+        -#  %li.list.user-website{:title => 'URL'}
+        -#    %i.icon.icon-globe
+        -#    = link_to(user.blog_url, user.blog_url, :target => '_blank')
+        - if user.github_url.present?
+          %li.list.user-github{:title => 'GitHub'}
+            %i.icon-sprite.icon-github-url
+            = link_to(t(:github), user.github_url, :target => '_blank')
+
+      %ul.lists.user-stats.bleed.last
+        %li
+          = link_to(user_path(user)) do
+            %em 1,300
+            REPOS
+        %li.last
+          = link_to(user_tags_path(user)) do
+            %em 45
+            TAGS

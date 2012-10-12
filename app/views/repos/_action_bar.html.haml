@@ -1,0 +1,6 @@
+- if current_user_is_owner?(page_owner)
+  %ul.repo-alt-actions.pull-right
+    %li
+      = link_to('#', :class => 'unstar-repo') do
+        %i.icon-sprite.icon-unstar
+        Unstar

@@ -1,0 +1,9 @@
+- title_str = "#{@user.login} / Tags"
+- page_title title_str
+- page_meta_title title_str
+
+- meta_tags do
+  = meta_tag_for_keywords(@user.login)
+
+- cache(['v1', 'users/_tab-tags/list', @user], :expires_in => 1.hour) do
+  = render 'users/tab', :user => @user, :widget_name => t(:tags), :widget_content => render('tags/list', :tags => @tags, :user => @user, :show_tag_count => true)

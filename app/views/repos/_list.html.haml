@@ -1,0 +1,18 @@
+%ol#repo-lists.lists.bleed.bordered.hovered
+  - is_repo_user_obj = repos.first.instance_of?(RepoUser) ? true : false
+  - repos.each do |repo|
+    - repo_user = is_repo_user_obj ? repo : nil
+    - repo = repo.repo if is_repo_user_obj
+    - tags = is_repo_user_obj ? repo_user.tags : repo.tags
+
+    %li.list
+      .ui-block.clearfix
+        %strong.ui-thumbnail.repo-icon-types{:href => "#"}
+          = image_tag('icon_public_repo.png')
+        .ui-block-body
+          - cache(['v3', 'repos/_list', repo]) do
+            = render 'repos/meta', :repo => repo
+            = render 'repos/meta_counts', :repo => repo
+
+          -#= render 'repos/action_bar', :page_owner => page_owner, :repo => repo, :repo_user => repo_user
+          = render 'repos/tag_form', :page_owner => page_owner, :repo => repo, :repo_user => repo_user, :tags => tags

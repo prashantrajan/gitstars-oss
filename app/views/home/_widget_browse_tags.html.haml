@@ -1,0 +1,6 @@
+- cache(['v1', 'home/_widget_browse_tags'], :expires_in => 1.hour) do
+  .widget.browse-repos
+    .widget-header
+      %h2 BROWSE BY TAGS
+    .widget-content
+      = render 'tags/list', :tags => tags, :user => nil, :show_tag_count => true

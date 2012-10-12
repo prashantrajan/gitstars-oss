@@ -1,0 +1,37 @@
+- searched_tag_names = @searched_tags.map(&:name).join(' + ')
+- title_str = "Search results for #{searched_tag_names}"
+- page_title title_str
+- page_meta_title title_str
+
+
+%header
+  .container
+    %h1.page-title
+      %span.txt Search results for
+      %span.search-tag #{searched_tag_names}
+
+%section.user-lists
+  .container
+    .row
+      .span8
+        .mega-search
+          = render 'tags/search_form', :tags => @searched_tags
+
+        .widget
+          .widget-header
+            %h2
+              REPOSITORIES
+              -#%strong (92382)
+          .widget-content
+            - if @repos.present?
+              = render('repos/list', :repos => @repos, :page_owner => nil)
+            - else
+              .alert.alert-block
+                %p
+                  %strong Oh snap!
+                  We couldn't find any repositories matching those tags. Please try something else.
+
+        = paginate(@repos) if @repos.present?
+
+      .span4
+        = render 'tags/widget_related_tags'

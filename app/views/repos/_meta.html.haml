@@ -1,0 +1,7 @@
+%div.repo-name
+  = link_to(repo.owner_login, repo.github_user_url, :target => '_blank')
+  %span /
+  = link_to(repo.name, repo.github_repo_url, :target => '_blank')
+  %i.icon.icon-sprite.icon-ext-lnk
+%div.repo-desc
+  %p= repo.description

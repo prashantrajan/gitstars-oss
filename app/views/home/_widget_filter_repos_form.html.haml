@@ -1,0 +1,10 @@
+.widget.filter-repos.coming-soon
+  .placeholder
+    %p COMING SOON
+  .widget-header
+    %h2 FILTER REPOS BY
+  .widget-content
+    = simple_form_for('', :url => 'javascript:void(0);', :method => :put) do |f|
+      = f.input :repo_languages, :label => false, :collection => ['Languages', 'Ruby', 'JavaScript', 'Python'], :selected => 'Ruby', :disabled => true
+      = f.input :repo_tags, :label => false, :collection => ['Tags',  'ORM', 'Visualizations', 'Uploaders'], :selected => 'ORM', :disabled => true
+      = f.submit 'Filter', :class => 'btn btn-secondary btn-cta2', :disabled => true

@@ -1,0 +1,241 @@
+// Gitstars style for jQuery tokeninput tagging function
+ul.token-input-list-gitstars {
+  overflow: hidden;
+  height: auto !important;
+  height: 1%;
+  min-width: 180px;
+  border: 1px solid $inputBorder;
+  cursor: text;
+  font-size: $baseFontSize;
+  font-family: $sansFontFamily;
+  min-height: 1px;
+  z-index: 999;
+  margin: 0;
+  padding: 0 2px;
+  background-color: $inputBackground;
+  list-style-type: none;
+  clear: left;
+  @include border-radius(3px);
+  @include box-shadow(inset 0 1px 4px rgba(0,0,0,.10));
+}
+
+ul.token-input-list-gitstars.token-input-focused-gitstars {
+  border-color: #7fc322; // For old browsers
+  border-color: rgba(127, 195, 34, 0.60);
+  @include box-shadow(inset 0px 0px 6px rgba(127,195,34,.45));
+  outline: 0;
+  outline: thin dotted 9;
+}
+
+ul.token-input-list-gitstars li input {
+  border: 0;
+  width: 100px;
+  padding: 3px 4px;
+  background-color: $white;
+  margin: 2px 0;
+  -webkit-appearance: caret;
+}
+
+li.token-input-token-gitstars {
+  overflow: hidden;
+  height: auto !important;
+  height: 15px;
+  margin: 4px 2px;
+  padding: 0px 5px;
+  background-color: darken($white, 4%);
+  color: #555;
+  cursor: default;
+  border: 1px solid #74ac23;
+  font-size: 13px;
+  float: left;
+  white-space: nowrap;
+  @include border-radius(3px);
+  @include gradient-vertical(#80c422, #72aa23);
+}
+
+li.token-input-token-gitstars p {
+  color: $white;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+li.token-input-token-gitstars span {
+  color: $white;
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+li.token-input-selected-token-gitstars {
+  background-color: $infoText;
+  border: 1px solid #5b881a;
+  color: $white;
+  @include gradient-vertical(#6ba61f, #608c1c);
+}
+
+li.token-input-input-token-gitstars {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+div.token-input-dropdown-gitstars {
+  position: absolute;
+  width: 300px;
+  background-color: $white;
+  overflow: hidden;
+  margin-top: 2px;
+  border: 1px solid darken($grayLighter,10%);
+  border: 0;
+  cursor: default;
+  font-size: 12px;
+  z-index: 1;
+  @include border-radius(3px);
+  @include gradient-vertical($white, $white);
+  @include box-shadow(0px 1px 3px rgba(0,0,0,0.26));
+  z-index: 9999 !important;
+}
+
+div.token-input-dropdown-gitstars p {
+  margin: 0;
+  padding: 5px 10px;
+  font-family: $serifFontFamily;
+  font-style: italic;
+  color: $gray;
+}
+
+div.token-input-dropdown-gitstars ul {
+  margin: 0;
+  padding: 0;
+}
+
+div.token-input-dropdown-gitstars ul li {
+  background-color: transparent;
+  color: $gray;
+  font-size: $baseFontSize;
+  padding: 5px 10px;
+  margin: 0;
+  list-style-type: none;
+}
+
+div.token-input-dropdown-gitstars ul li:first-child {
+  border-top-color: transparent !important;
+  @include border-top-left-radius (2px);
+  @include border-top-right-radius (2px);
+}
+
+div.token-input-dropdown-gitstars ul li:last-child {
+  @include border-bottom-left-radius (2px);
+  @include border-bottom-right-radius (2px);
+}
+
+div.token-input-dropdown-gitstars ul li.token-input-dropdown-item-gitstars {
+  background-color: transparent;
+}
+
+div.token-input-dropdown-gitstars ul li.token-input-dropdown-item2-gitstars {
+  background-color: transparent;
+}
+
+div.token-input-dropdown-gitstars ul li em {
+  font-weight: normal;
+  font-family: $serifFontFamily !important;
+  font-style: italic !important;
+}
+
+div.token-input-dropdown-gitstars ul li.token-input-selected-dropdown-item-gitstars {
+  background-color: #7fc322;
+  border-top: 1px solid #76b41f;
+  color: $white;
+  @include gradient-vertical(#7fc322, #72a923);
+}
+
+// Additional styles
+
+.token-input-list-gitstars input {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  //
+  //&:active, &:focus {
+  //  box-shadow: none !important;
+  //}
+}
+
+.tags-wrapper {
+  .simple_form.edit_repo_user {
+    margin-bottom: 0;
+
+    .control-group {
+      display: inline-block;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  .form-action {
+    clear:both;
+    display: block;
+    padding-bottom: 5px;
+
+    .btn {
+      margin-right: 5px;
+    }
+
+    .lnk-cancel {
+      font-size: 12px;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .simple_form.edit_repo_user {
+      margin-bottom: 10px;
+    }
+  }
+
+  ul.tags.mini, ol.tags.mini {
+    display: inline-block;
+    float: left;
+  }
+}
+
+.edit-tags-form {
+  clear: both;
+}
+
+.edit-tags {
+  background: #e0eac9;
+  color: #679004;
+  border: 1px solid transparent;
+  display: inline-block;
+  float: left;
+  font-size: 11px;
+  height: 16px;
+  line-height: 16px;
+  margin-bottom: 5px;
+  margin-right: 4px;
+  padding: 0 3px;
+  text-decoration: none !important;
+  text-shadow: 0 1px 0 #FFF;
+  @include border-radius(2px);
+  $transition: 0.33s;
+  @include transition($transition);
+
+  .icon-edit-tags {
+    background: image-url('icon_sprite.png') no-repeat -20px -152px;
+    height: 12px;
+    width: 12px;
+  }
+
+  &:hover {
+    background: #d7e1c0;
+    color: #415f04;
+
+    .icon-edit-tags {
+      background-position: -20px -171px;
+    }
+  }
+}

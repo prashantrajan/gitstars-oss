@@ -1,0 +1,22 @@
+// GitStars responsive stylesheet
+// For phone and tablet devices
+// -------------------------------------------------------------
+
+// REPEAT VARIABLES & MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+
+@import "gs/variables"; // Modify this for custom colors, font-sizes, etc
+@import "gs/mixins";
+
+// MEDIA QUERIES
+// ------------------
+
+// Phones to portrait tablets and narrow desktops
+@import "gs/responsive_767px_max";
+
+// Tablets to regular desktops
+@import "gs/responsive_768px_979px";
+
+// Large desktops
+@import "gs/responsive_1200px_min";

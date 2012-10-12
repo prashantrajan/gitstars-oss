@@ -1,0 +1,6 @@
+- tags ||= tags
+
+= form_tag '/search', :method => :get, :class => 'form-search' do
+  %input#tag-search-field{:name => 'q', :type => 'text', :class => 'input-large search-query',
+                          :data => { 'remote-url' => all_names_tags_path(:format => :json), 'load' => tags.to_json } }
+  = submit_tag 'Search', :class => 'btn btn-search btn-secondary'

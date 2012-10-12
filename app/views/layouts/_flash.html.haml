@@ -1,0 +1,15 @@
+- alert_options = {'data-alert-class' => 'alert', 'class' => 'alert'}
+- link_options = {:href => '#', 'data-dismiss' => 'alert', :title => 'Close'}
+
+#flashes.flash-message
+  - if notice.present?
+    %div.alert-success{alert_options}
+      = notice
+      %a.close{link_options}
+        %i.icon.icon-remove.icon-white
+
+  - elsif alert.present?
+    %div.alert-error{alert_options}
+      = alert
+      %a.close{link_options}
+        %i.icon.icon-remove.icon-white

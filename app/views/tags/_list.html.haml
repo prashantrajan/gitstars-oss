@@ -1,0 +1,4 @@
+%ol#tags.tags.clearfix
+  - tags.each do |tag|
+    %li.tags
+      = render 'tags/tag', :user => user, :tag => tag, :show_tag_count => show_tag_count

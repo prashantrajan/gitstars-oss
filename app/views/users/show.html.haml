@@ -1,0 +1,13 @@
+- title_str = "#{@user.login} / Repositories"
+- page_title title_str
+- page_meta_title title_str
+
+- meta_tags do
+  = meta_tag_for_keywords(@user.login)
+
+
+- if @pending_repos_fetch
+  = render 'users/first_signin', :user => @user
+- else
+  = render 'users/tab', :user => @user, :widget_name => t(:repositories), :widget_content => render('repos/list', :repos => @repos, :page_owner => @user),
+                        :tags => @popular_tags, :repos => @repos

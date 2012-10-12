@@ -1,0 +1,120 @@
+// GITSTARS VARIABLES
+// Variables to customize the look and feel of Bootstrap
+// -------------------------------------------------
+
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            #222 !default;
+$grayDark:              #303131 !default;
+$gray:                  #555 !default;
+$grayLight:             #999 !default;
+$grayLighter:           #eee !default;
+$offWhite:              #f7f7f6 !default;
+$white:                 #fff !default;
+
+// Accent colors
+// ----------------------------
+$blue:                  #3391CC !default;
+$blueDark:              #2882bb !default;
+$green:                 #46a546 !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
+$orange:                #f89406 !default;
+$pink:                  #c3325f !default;
+$purple:                #7a43b6 !default;
+$translucent:           rgba(0,0,0,0.2) !default;
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        $offWhite !default;
+$textColor:             #888 !default;
+
+// Links
+// -------------------------
+$linkColor:             #3391CC !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sansAltFontFamily:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+
+$baseFontSize:          14px;
+$baseLineHeight:        18px;
+
+$headingsFontWeight:    400 !default;    // instead of browser default, bold
+$headingsColor:         #444 !default; // empty to use BS default, @textColor
+$headingsWidget:        darken($gray, 20%) !default;
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     #fdfdfd !default;
+$btnBackgroundHighlight:            #f4f4f4 !default;
+$btnBorder:                         #ccc !default;
+
+$btnPrimaryBackground:              $linkColor !default;
+$btnPrimaryBackgroundHighlight:     #2883bb !default;
+$btnPrimaryBorder:                  #2b78b6 !default;
+
+$btnSecondaryBackground:            #80c422 !default;
+$btnSecondaryBackgroundHighlight:   #73aa23 !default;
+$btnSecondaryBorder:                #70a42b !default;
+
+$btnInfoBackground:                 #22bdc7 !default;
+$btnInfoBackgroundHighlight:        #24979d !default;
+$btnInfoBorder: #24959b !default;
+
+$btnSuccessBackground:              #fbb450 !default;
+$btnSuccessBackgroundHighlight:     #f8960a !default;
+$btnSuccessBorder:                  #ed8c0a !default;
+
+$btnWarningBackground:              #bd3c75 !default;
+$btnWarningBackgroundHighlight:     #8e2855 !default;
+$btnWarningBorder:                  #822848 !default;
+
+$btnDangerBackground:               #d23426 !default;
+$btnDangerBackgroundHighlight:      #a63229 !default;
+$btnDangerBorder:                   #a63a31 !default;
+
+$btnInverseBackground:              #888 !default;
+$btnInverseBackgroundHighlight:     #666 !default;
+$btnInverseBorder:                  #555 !default;
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          asset-url("gs-glyphicons-halflings.png", image) !default;
+$iconWhiteSpritePath:     asset-url("gs-glyphicons-halflings-white.png", image) !default;
+
+// Navbar
+// -------------------------
+$navbarHeight:                    60px !default;
+$navbarBackground:                $grayDark !default;
+
+$navbarText:                      $offWhite !default;
+$navbarLinkColor:                 $white !default;
+$navbarLinkColorHover:            $offWhite !default;
+
+// Form states and alerts
+// -------------------------
+//$errorText
+$warningBackground:       #f7edc0 !default;
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 10%) !default;
+
+$errorBackground:         #f6dad8 !default;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 10%) !default;
+
+$successBackground:       #daf0d1 !default;
+$successBorder:           darken(adjust-hue($successBackground, -10), 10%) !default;
+
+$infoBackground:          #d6eaf4 !default;
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 10%) !default;

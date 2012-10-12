@@ -1,0 +1,31 @@
+// LARGE DESKTOP & UP
+// ------------------
+
+@media (min-width: 1200px) {
+
+  // Extended UI Block - User Profile
+  .ui-block.profile-info {
+    .ui-block.profile-info {
+      .username {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  // Extended: Mega Search Form
+  // ------------------------------
+
+  .mega-search {
+    // Extended for jQuery Token Input
+    ul.token-input-list-gitstars {
+      width: 600px;
+    }
+    .form-search {
+      .search-query {
+        width: 612px;
+      }
+    }
+  }
+
+}

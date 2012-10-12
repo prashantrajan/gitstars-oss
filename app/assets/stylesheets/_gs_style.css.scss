@@ -1,0 +1,2087 @@
+// GITSTARS CORE STYLESHEET
+// -------------------------------------------------
+
+
+// Body and structure
+// --------------------------------------------------
+body {
+  background: image-url('bg_fabric_plaid_dark.png') $offWhite;
+  position: relative;
+  padding-top: 60px;
+}
+
+/* custom selection colors */
+::-moz-selection {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.95);
+  background: $linkColor;
+  text-shadow: none;
+}
+
+::selection {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.95);
+  background: $linkColor;
+  text-shadow: none;
+}
+
+a {
+  outline: 0 none !important;
+}
+
+
+// Navbar
+// --------------------------------------------------
+
+// Brand, links, text, and buttons
+.navbar {
+  .btn-navbar {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #444;
+    padding: 12px 10px 11px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    @include box-shadow(none);
+
+    .icon-bar {
+      background-color: #999;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #666;
+      .icon-bar {
+        background-color: $grayLighter;
+      }
+    }
+  }
+
+  .brand {
+    background: image-url('brand.png') no-repeat;
+    color: $white;
+    display: block;
+    float: left;
+    font-weight: 500;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+    width: 125px;
+
+    &:active {
+      background-position: 0 1px;
+    }
+  }
+}
+
+.navbar-inner {
+  background: image-url('bg_noise.png') $grayDarker;
+}
+
+// Links
+.navbar .nav > li > a {
+  padding: 4px 10px 4px;
+}
+
+
+// Main
+// --------------------------------------------------
+
+.main {
+  background: image-url('bg_fabric_plaid.png') $offWhite;
+  min-height: 500px;
+  padding-bottom: 3em;
+  padding-top: 2em;
+}
+
+
+// Footer
+// --------------------------------------------------
+
+.footer {
+  //background-color: rgba(0, 0, 0, 0.05);
+  background: image-url('bg_fabric_plaid_dark.png') $offWhite;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  color: darken($grayLight, 10%);
+  font-family: $sansAltFontFamily;
+  padding: 2em 0 3em;
+  position: relative;
+  @include box-shadow(#{0 1px 2px rgba(0, 0, 0, 0.02) inset, 0 -1px 0 rgba(255, 255, 255, 0.25)});
+
+  a {
+    color: darken($grayLight, 20%);
+    $transition: 0.33s;
+    @include transition($transition);
+
+    &:hover {
+      color: $linkColorHover;
+      text-decoration: none;
+    }
+  }
+
+  p, ul  {
+    color: darken($grayLight, 15%);
+    font-size: 12px;
+    line-height: 20px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  }
+
+  .about {
+    a {
+      font-weight: bold;
+    }
+  }
+
+  .brand {
+    background: image-url('icon_sprite.png') no-repeat 0 -361px;
+    color: $white;
+    display: block;
+    float: left;
+    font-weight: 500;
+    height: 24px;
+    margin: 0;
+    opacity: 0.7;
+    padding: 0;
+    text-align: left;
+    text-indent: -9999px;
+    width: 104px;
+  }
+
+  .footer-nav {
+    list-style-type: none;
+    margin-left: -10px;
+
+    li {
+      border-right: 1px solid #bbb;
+      display: inline-block;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .last, &:last-child {
+      border-right: 0;
+    }
+
+    a {
+      font-weight: bold;
+    }
+  }
+
+  // Back to top
+  .backtotop {
+    left: 50%;
+    margin-left: -9px;
+    padding: 0 !important;
+    position: absolute;
+    top: -0.6em;
+  }
+
+  .pull-right {
+    text-align: right;
+  }
+}
+
+
+// Base CSS
+// --------------------------------------------------
+
+// Typography
+// -------------------------------
+// Headings, body text, lists, code, etc..
+
+.page-title {
+  border-bottom: 1px solid darken($grayLighter, 10%);
+  color: darken($grayLight,14%);
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+  @include box-shadow(0 1px 0 rgba(255,255,255,0.7));
+
+  a {
+    color: darken($grayLight,14%);
+    font-weight: 600;
+    $transition: 0.22s;
+    @include transition($transition);
+
+    &:hover {
+      color: darken($linkColor, 22%);
+      text-decoration: none;
+      .txt {
+        color: darken($linkColor, 22%);
+      }
+    }
+  }
+
+  .txt {
+    color: $grayDark;
+  }
+
+  .last-tag {
+    color: $grayDark;
+  }
+
+  .divider {
+    color: $gray;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 0 2px;
+    position: relative;
+    top: -4px;
+    font-weight: 300;
+  }
+}
+
+// Form
+// --------------------------------
+
+// Everything else
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],
+input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"],
+input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  @include box-shadow(inset 0 1px 4px rgba(0,0,0,.10));
+
+  // Focus state
+  &:focus {
+    border-color: rgba(82,168,236,.8);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+}
+
+// Input Groups
+// --------------
+
+// Allow us to put symbols and text within the input field for a cleaner look
+.input-prepend, .input-append {
+  .add-on, .btn {
+    margin-left: -4px;
+  }
+  .add-on.active, .btn.active, .btn:active {
+    top: 0;
+  }
+}
+.input-prepend {
+  .add-on, .btn {
+    margin-right: -4px;
+  }
+}
+
+
+// Extended: Input Groups (Search Form)
+// -----------------------
+
+.form-search {
+  margin-bottom: 0;
+  padding: 10px 0;
+  .input-prepend, .input-append {
+    input {
+      height: 32px;
+      padding: 6px 10px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    .btn {
+      padding: 6px 14px;
+      margin-left: -4px;
+    }
+  }
+}
+
+.form-search-flexy {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+// Extended: Mega Search Form
+// ------------------------------
+
+.mega-search {
+  margin-bottom: 20px;
+  background: $offWhite;
+  border: 1px solid darken($grayLighter,15%);
+  @include border-radius(4px);
+  @include gradient-vertical($offWhite, darken($grayLighter,5%));
+  @include box-shadow(0 0 10px rgba(0,0,0,0.2));
+  @include box-shadow(#{inset 0px 1px 0px rgba(255,255,255,0.8), 0 0 10px rgba(0,0,0,0.2)});
+}
+
+.form-search {
+  padding: 0;
+  @include clearfix();
+
+  .search-query {
+    border: 1px solid darken($inputBorder, 2%);
+    height: 52px;
+    margin-left: 10px;
+    margin-right: 7px;
+    padding: 16px 10px;
+    width: 462px; // for 1024px width
+    @include box-shadow(#{0px 1px 0px rgba(255,255,255,0.8),inset 0 2px 4px rgba(0,0,0,0.10)});
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .btn-search {
+    font-size: 24px;
+    height: 52px;
+    line-height: 29px;
+    margin: 10px 0;
+    padding: 10px 27px;
+    @include border-radius(3px);
+    @include box-shadow(#{0px 1px 0px rgba(255,255,255,0.6),inset 0px 1px 0px rgba(255,255,255,0.4)});
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  // Extended for jQuery Token Input
+  ul.token-input-list-gitstars {
+    border: 1px solid darken($inputBorder, 2%);
+    float: left;
+    font-size: 20px !important;
+    margin: 10px;
+    padding: 5px;
+    width: 450px; // for 1024px width
+    z-index: 9999;
+    @include box-shadow(#{0px 1px 0px rgba(255,255,255,0.8),inset 0 2px 4px rgba(0,0,0,0.10)});
+  }
+
+  li.token-input-input-token-gitstars {
+    line-height: 23px;
+  }
+
+  ul.token-input-list-gitstars li input {
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  li.token-input-token-gitstars {
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  ul.token-input-list-gitstars.token-input-focused-gitstars {
+    border: 1px solid darken($inputBorder, 8%);
+    @include box-shadow(#{0px 1px 0px rgba(255,255,255,1),inset 0 2px 6px rgba(0,0,0,0.15)});
+  }
+}
+
+// Extended: Mini Search
+// ------------------------------
+.mini-search {
+  display: inline-block;
+
+  .form-search {
+    margin-top: 10px;
+    padding: 0;
+
+    .search-query {
+      background: $grayLighter;
+      border: 1px solid $grayDarker;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 8px 10px;
+      height: 36px;
+      width: 211px;
+      @include box-shadow(#{0px 1px 0px rgba(255,255,255,0.2),inset 0 1px 1px rgba(0,0,0,0.4)});
+      $transition: 0.33s;
+      @include transition($transition);
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+
+    .btn-search {
+      background: image-url('icon_sprite.png') no-repeat 0 -256px;
+      border: 0 none;
+      height: 14px;
+      right: 14px;
+      margin-bottom: 0;
+      position: absolute;
+      text-indent: -9999px;
+      top: 1px;
+      width: 20px;
+      padding: 0 0;
+      margin: 10px 0;
+      @include box-shadow(none);
+    }
+
+    // Extended for jQuery Token Input
+    ul.token-input-list-gitstars {
+      background: $grayLighter;
+      border: 1px solid $grayDarker;
+      margin: 0;
+      padding: 5px 24px 5px 5px;
+      width: auto;
+      @include box-shadow(#{0px 1px 0px rgba(255,255,255,0.2),inset 0 1px 1px rgba(0,0,0,0.4)});
+      $transition: 0.33s;
+      @include transition($transition);
+    }
+
+    ul.token-input-list-gitstars li input {
+      font-size: 14px;
+      height: 22px;
+      line-height: 22px;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.token-input-token-gitstars {
+      font-size: 14px;
+      height: 22px;
+      line-height: 22px;
+      margin: 0 4px 2px 0;
+      $transition: 0.33s;
+      @include transition($transition);
+    }
+
+    ul.token-input-list-gitstars.token-input-focused-gitstars {
+      background: $white;
+      @include box-shadow(none);
+    }
+  }
+}
+
+.navbar {
+  .mini-search {
+    margin-left: 26px;
+    margin-right: 0px;
+    .form-search {
+      //border-right: 1px solid darken($gray,5%);
+      padding-right: 14px;
+      position: relative;
+      border-left: 1px solid darken($gray,5%);
+      padding-left: 20px;
+    }
+  }
+}
+
+
+// Components: Common
+// --------------------------------------------------
+
+// View all tags lnk
+
+.view-all-tags {
+  border-top: 1px solid $grayLighter;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.view-all-tags.bleed {
+  margin: 20px -20px -20px -20px;
+  padding: 20px;
+}
+
+.view-tags {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-decoration: none !important;
+
+  .icon-arrow-right {
+    left: 4px;
+    position: relative;
+    top: 4px;
+  }
+
+  &:hover {
+    .icon-arrow-right {
+      background-position: 0 -217px;
+    }
+  }
+}
+
+// Loader Style
+// -------------------------------
+.loader {
+  color: $textColor;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px 12px 12px;
+  text-align: center;
+  z-index: 100;
+  @include border-radius(8px);
+
+  .icon-loader {
+    background: image-url('loader_light.gif') no-repeat;
+    height: 16px;
+    display: block;
+    margin: 5px auto;
+    width: 16px;
+  }
+}
+
+// loader.loader-middle
+.loader-middle {
+  margin-left: 50%;
+  left: -30px;
+  position: relative;
+}
+
+// Extended: Loader (Size and Theme)
+// ------------
+
+// loader.loader-big
+.loader-big {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  padding: 14px 18px 14px;
+  @include border-radius(10px);
+
+  .icon-loader {
+    background: image-url('loader_light_big.gif') no-repeat;
+    height: 32px;
+    width: 32px;
+    margin-bottom: 10px;
+  }
+}
+
+.loader-big.loader-middle {
+  left: -43px;
+}
+
+// loader.loader-dark
+.loader-dark {
+  background: $grayDark;
+  background: rgba(0,0,0,0.80);
+  color: $offWhite;
+  text-shadow: 0 1px 0 rgba(0,0,0,1);
+}
+.loader-dark.loader {
+  .icon-loader {
+    background: image-url('loader_dark.gif') no-repeat;
+  }
+}
+.loader-dark.loader-big {
+  .icon-loader {
+    background: image-url('loader_dark_big.gif') no-repeat;
+  }
+}
+
+// loader.loader-light
+.loader-light {
+  background: $offWhite;
+  background: rgba(0,0,0,0.05);
+  color: $grayLight;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+.loader-light.loader-big {
+  .icon-loader {
+    background: image-url('loader_light_big.gif') no-repeat;
+  }
+}
+
+// Loader wrapper
+.loader-wrapper {
+  text-align: center;
+}
+
+.loader-wrapper.first-time {
+  line-height: 340px;
+  min-height: 340px;
+  vertical-align: middle;
+}
+
+
+// Back to top
+.backtotop {
+  text-indent: -9999px;
+  a {
+    background: image-url('icon_sprite.png') #CCC no-repeat 5px -181px;
+    border: 2px solid $white;
+    display: block;
+    height: 18px;
+    width: 18px;
+    $transition: 0.33s;
+    @include transition($transition);
+    @include border-radius(20px);
+    @include box-shadow(0 -2px 1px rgba(0,0,0,.1));
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+}
+
+// Custom Sprite
+// -------------------------------
+.icon-sprite {
+  background: image-url('icon_sprite.png') no-repeat;
+}
+
+.icon-ext-lnk {
+  background-position: -1px -137px;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  top: 7px;
+  left: 2px;
+}
+
+.icon-arrow-right {
+  background-position: 0 -204px;
+  height: 10px;
+  width: 10px;
+}
+
+.icon-github-url {
+  background-position: 0 -234px;
+  height: 16px;
+  width: 16px;
+}
+
+.icon-unstar {
+  background-position: 0 -276px;
+  height: 14px;
+  width: 14px;
+}
+
+
+// Widgets
+// -------------------------------
+
+// Core widget style
+.widget {
+  background: $white;
+  margin-bottom: 2em;
+  position: relative;
+  @include border-radius(3px);
+  @include box-shadow(#{0px 0px 3px rgba(0,0,0,0.2)});
+}
+
+.widget-header {
+  background: #f5f5f5;
+  border-bottom: 1px solid darken($grayLighter,14%);
+  border-top: 1px solid $white;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  @include clearfix();
+  @include border-radius(3px 3px 0 0);
+  @include gradient-vertical($offWhite, darken($grayLighter,2%));
+
+  h2, .h2 {
+    color: $headingsWidget;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 60px;
+    text-shadow: 0 1px 0 $white;
+  }
+
+  em {
+    color: darken($grayLight, 10%);
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  .nav-tabs {
+    display: inline-block;
+    float: left;
+  }
+}
+
+.widget-sub-header {
+  background: #f9fbfc;
+  border-bottom: 1px solid $grayLighter;
+  padding: 0 20px;
+  box-shadow: inset 0 4px 4px -4px rgba(0, 0, 0, 0.15);
+}
+
+.widget-content {
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+// Extended: Narrow corner spaces
+.widget.narrow {
+  .widget-content {
+    padding: 12px;
+  }
+}
+
+// Extended: Widget Type Horizontal
+.widget.whorizontal {
+  padding: 20px;
+  @include clearfix();
+
+  .widget-header {
+    background: white;
+    border-bottom: 0;
+    border-right: 1px solid #EEE;
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 25px;
+    padding: 0 25px 0 0;
+
+    h2, .h2 {
+      line-height: 30px;
+    }
+  }
+  .widget-content {
+    float: left;
+    padding: 0;
+  }
+}
+
+// Extended: Filter-repos
+.widget.filter-repos {
+  .simple_form {
+    margin-bottom: 0;
+  }
+
+  .control-group {
+    select {
+      box-sizing: border-box;
+      height: 36px;
+      width: 100%;
+    }
+  }
+
+  .btn {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 30px;
+  }
+}
+
+// Tags
+// -------------------------------
+
+// Core tag style
+ul.tags, ol.tags {
+  list-style-type: none;
+  margin: -16px 0 0 -16px;
+
+  li.tags {
+    float: left;
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
+  a {
+    color: darken($linkColor, 5%);
+    display: inline-block;
+    margin-right: 16px;
+    position: relative;
+    text-decoration: none !important;
+
+    strong {
+      background: #F4F4F4;
+      border-bottom: 1px solid #E5E5E5;
+      border-left: 1px solid #E5E5E5;
+      border-right: 1px solid #dfdede;
+      display: inline-block;
+      float: left;
+      height: 18px;
+      font-weight: 600;
+      padding: 6px 8px;
+      text-shadow: 0 1px 0 $white;
+      @include border-radius(3px 0 0 3px);
+      $transition: 0.33s;
+      @include transition($transition);
+    }
+
+    em {
+      background: #F4F4F4;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #E5E5E5;
+      color: #666;
+      display: inline-block;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      float: left;
+      padding: 6px 8px;
+      text-shadow: 0 1px 0 $white;
+      $transition: 0.33s;
+      @include transition($transition);
+    }
+
+    // triangle hole
+    &:before {
+      background-color: $white;
+      content: "";
+      height: 4px;
+      position: absolute;
+      right: -6px;
+      top: 12px;
+      width: 4px;
+      z-index: 10;
+      @include border-radius(20px);
+      @include box-shadow(#{inset 0px 1px 0 rgba(0,0,0,0.15)});
+    }
+
+    // triangle
+    &:after {
+      border-color:transparent transparent transparent #F4F4F4;
+      border-style:solid;
+      border-width:15px;
+      content: "";
+      display: block;
+      width:0;
+      height: 0;
+      position: absolute;
+      right: -30px;
+      top: 0;
+    }
+
+  }
+
+  a:hover {
+    strong {
+      background: darken($linkColor, 5%);
+      border-bottom: 1px solid darken($linkColor, 20%);
+      border-left: 1px solid darken($linkColor, 20%);
+      border-right: 1px solid darken($linkColor, 20%);
+      color: $white;
+      text-shadow: 0 1px 0 $black;
+    }
+    em {
+      color: $grayLight;
+    }
+  }
+}
+
+// Extended Tags Minis
+
+ul.tags.mini, ol.tags.mini {
+  margin-right: 16px;
+  margin-top: 0;
+
+  li.tags {
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+
+  a {
+    font-size: 11px;
+    margin-right: 4px;
+
+    strong {
+      font-weight: normal;
+      padding: 0 4px;
+    }
+    em {
+      padding: 0 5px;
+    }
+
+    // triangle hole
+    &:before {
+      right: -5px;
+      top: 7px;
+      width: 4px;
+    }
+
+    // triangle
+    &:after {
+      border-color:transparent transparent transparent #F4F4F4;
+      border-style:solid;
+      border-width:10px;
+      right: -20px;
+      top: 0;
+    }
+  }
+}
+
+
+// List Views
+// -------------------------------
+
+// Common style
+.lists {
+  margin-bottom: 0;
+  margin-left: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+// Extended Border Repo
+.lists.bordered {
+  .list {
+    @include clearfix();
+    border-bottom: 1px solid $grayLighter;
+    padding: 10px 0;
+  }
+  .list:last-child {
+    border-bottom: 0;
+  }
+}
+
+// Extended Hover State
+.lists.hovered {
+  .list {
+    &:hover {
+      background-color: darken($white,3%);
+      @include gradient-vertical($white, darken($white,3%));
+    }
+  }
+  .list:first-child {
+    @include border-top-radius(4px);
+  }
+  .list:last-child {
+    @include border-bottom-radius(4px);
+  }
+}
+
+// Extended Bleeding List Style
+// list w/c doesn't require padding on a widget content
+.lists.bleed {
+  margin: -20px;
+  .list {
+    padding: 20px;
+  }
+}
+
+.repo-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-right: 70px;
+
+  span {
+    color: $grayLight;
+    font-weight: 200;
+  }
+}
+
+.repo-desc {
+  min-height: 20px; // consistent min height w/out description
+  margin-right: 70px;
+
+  p {
+    color: $grayDark;
+    font-weight: 400;
+  }
+}
+
+.repo-date {
+  color: $grayLight;
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.repo-counters {
+  color: $grayLight;
+  font-size: 12px;
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  .counter {
+    background-color: $grayLighter;
+    color: $grayDark;
+    display: inline-block;
+    line-height: 12px;
+    margin-right: 3px;
+    padding: 2px 3px;
+    text-align: center;
+    min-width: 14px;
+    @include border-radius(3px);
+  }
+}
+
+.repo-counters.pos-right {
+  margin-left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.repo-alt-actions {
+  //border-top: 1px solid $grayLighter;
+  font-size: 12px;
+  text-align: right;
+
+  a {
+    font-size: 12px;
+  }
+
+  a.unstar-repo {
+    color: #999;
+    .icon-unstar {
+      background-position: 0 -276px;
+    }
+
+    &:hover {
+      color: #dd8585;
+      text-decoration: none;
+      .icon-unstar {
+        background-position: 0 -292px;
+      }
+    }
+  }
+}
+
+//.repo-alt-actions.pos-right {
+//  margin-left: 0;
+//  position: absolute;
+//  right: 0;
+//}
+
+// Extended Narrow Sapce
+.lists.narrow {
+  .list {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+// Extended User Details
+.lists.user-details {
+  border-top: 1px solid #DDD;
+  padding-top: 15px;
+
+  a {
+    color: $gray;
+    &:hover {
+      color: $linkColor;
+    }
+  }
+
+  .list {
+    color: $gray;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 4px;
+    padding: 0 0 0 20px;
+    position: relative;
+    word-wrap: break-word;
+
+    i {
+      left: 0;
+      margin-top: 2px;
+      position: absolute;
+    }
+  }
+}
+
+.lists.user-details.bleed {
+  margin: 0 -20px;
+  padding: 15px 20px 10px;
+}
+
+.lists.user-stats {
+  border-top: 1px solid #DDD;
+  padding-top: 15px;
+  font-weight: 300;
+  @include clearfix();
+
+  a {
+    color: #888;
+    &:hover {
+      color: $linkColorHover;
+      text-decoration: none;
+      text-shadow: 0 0 2px rgba(0,0,0,0.2);
+      em {
+        color: $linkColorHover;
+      }
+    }
+  }
+
+  em {
+    color: $grayDark;
+    display: block;
+    font-size: 20px;
+    font-style: normal;
+    margin-bottom: 2px;
+  }
+
+  li {
+    border-right: 1px solid #DDD;
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    float: left;
+    padding-bottom: 10px;
+    padding-top: 12px;
+    width: 49%;
+  }
+  li.last {
+    border-right: 0;
+    width: 50%;
+  }
+}
+
+.lists.user-stats.bleed {
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.lists.user-stats.bleed.last {
+  margin-bottom: -12px;
+}
+
+// UI Blocks
+// -------------------------------
+
+.ui-block {
+  .ui-thumbnail {
+    background-color: $white;
+    border: 1px solid #DDD;
+    display: inline-block;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 4px;
+    width: auto;
+    @include border-radius(3px);
+    @include box-shadow(#{0 0 3px rgba(0,0,0,0.1)});
+  }
+
+  .ui-block-body {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+// Extended UI Block - User Profile
+.ui-block.profile-info {
+  text-align: center;
+
+  .ui-thumbnail {
+    border: 0;
+    padding: 0;
+
+    img {
+      width: 50px;
+      @include border-radius(2px);
+      @include box-shadow(0 1px 1px rgba(0, 0, 0, .5));
+    }
+  }
+
+  .ui-block-body {
+    text-align: left;
+  }
+
+  .username {
+    color: $grayDark;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    word-wrap: break-word;
+
+    a {
+      color: $grayDark;
+      &:hover {
+        color: $linkColor;
+      }
+    }
+  }
+
+  .fullname {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+// Extended Repo Icon Types
+.ui-thumbnail.repo-icon-types {
+  border: 0;
+  margin-right: 14px;
+  padding: 0;
+  @include box-shadow(none);
+}
+
+// Extended UI Block - Activity List
+.ui-block.activity-list {
+  .ui-block-body {
+    padding-bottom: 5px;
+  }
+
+  .ui-thumbnail {
+    background-color: darken($grayLighter, 8%);
+    margin-bottom: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    @include box-shadow(none);
+    $transition: 0.33s;
+    @include transition($transition);
+
+    &:hover {
+      background-color: darken($grayLighter, 30%);
+    }
+
+    img {
+      @include border-radius(2px);
+      @include box-shadow(0 1px 1px rgba(0, 0, 0, .4));
+    }
+  }
+
+  .url {
+    color: $gray;
+    display: block;
+    font-weight: 600;
+    line-height: 14px;
+    margin-top: 5px;
+
+    &:hover {
+      color: $linkColor;
+      text-decoration: none;
+    }
+  }
+
+  time {
+    font-size: 11px;
+  }
+
+  .stats {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    font-size: 11px;
+    color: #AAA;
+    font-weight: 400;
+    padding: 0 1px;
+
+    .counter {
+      background-color: $grayLighter;
+      color: $grayDark;
+      display: inline-block;
+      line-height: 12px;
+      margin-right: 3px;
+      padding: 2px 3px;
+      text-align: center;
+      min-width: 14px;
+      @include border-radius(3px);
+    }
+
+    &:hover {
+      color: $linkColor;
+      text-decoration: none ;
+
+      .counter {
+        background-color: $linkColor;
+        color: $white;
+      }
+    }
+  }
+}
+
+// Banner CTA
+// -------------------------------
+
+// Core style
+.manage-banner {
+  background: $grayDark;
+  margin-bottom: 2em;
+  padding: 16px 20px 10px;
+  text-align: center;
+  @include border-radius(3px);
+
+  p {
+    color: $offWhite;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 24px;
+  }
+
+  .btn-primary.signin {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+}
+
+
+// Kudos
+// -------------------------------
+
+// Temporary Placeholder
+
+.coming-soon {
+  position: relative;
+
+  .placeholder {
+    border-top: 60px solid $btnInfoBackground;
+    border-left: 60px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    z-index: 100;
+
+    p {
+      color: $white;
+      font-weight: bold;
+      font-size: 9px;
+      height: 60px;
+      line-height: 9px;
+      position: absolute;
+      right: 8px;
+      text-align: center;
+      top: -54px;
+      width: 54px;
+      @include rotate(45deg);
+    }
+  }
+
+  // Temp Kudos
+  .fixed {
+    opacity: 0.80;
+
+    a, .btn {
+      cursor: default;
+    }
+  }
+
+  // Related Tags
+  .widget-header, .widget-content {
+    @extend .fixed;
+  }
+}
+
+.kudos {
+  .fixed {
+    height: 100px;
+    text-align: center;
+  }
+}
+
+.kudos-button {
+  background-color: $black;
+  color: $white !important;
+  display: inline-block;
+  font-size: 48px;
+  font-weight: 600;
+  height: 74px;
+  margin: 0 4px;
+  text-align: center;
+  text-decoration: none !important;
+  width: 74px;
+  @include border-radius(50px);
+  @include box-shadow(#{0 0 2px rgba(0,0,0,0.4)});
+
+  .figure {
+    background-color: $black;
+    border: 3px solid $white;
+    display: block;
+    height: 60px;
+    line-height: 62px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    text-indent: -5px;
+    width: 60px;
+    @include border-radius(50px);
+    $transition: 0.33s;
+    @include transition($transition);
+
+    .star {
+      background: url('icon_sprite.png') no-repeat -21px -136px;
+      display: block;
+      height: 12px;
+      font-size: 30px;
+      position: absolute;
+      right: 8px;
+      top: 23px;
+      width: 12px;
+      text-indent: -9999px;
+    }
+  }
+}
+
+// Hover transistion effect for Kudos
+// works on webkit browsers only
+
+@-webkit-keyframes fontbulger {
+  0%, 100% {
+    font-size: 40px;
+  }
+  50% {
+    font-size: 40px;
+  }
+}
+
+.kudos-button:hover {
+  -webkit-animation: fontbulger 1.2s;
+  @include box-shadow(#{0 0 3px rgba(0,0,0,0.8)});
+
+  .figure {
+    background-color: #c73d0d;
+  }
+}
+
+.kudos-score {
+  color: $grayLight !important;
+  display: inline-block;
+  text-decoration: none !important;
+  position: relative;
+  top: 14px;
+
+  .num {
+    color: $grayDark;
+    display: block;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 200;
+  }
+  .copy {
+    font-size: 12px;
+  }
+}
+
+
+// Components: Buttons & Alerts
+// --------------------------------------------------
+
+// Core
+.btn {
+  outline: 0 none !important;
+  padding: 4px 10px;
+  color: darken($grayLight, 20%);
+  border-color: $btnBorder;
+  @include border-radius(2px);
+  @include box-shadow(none);
+}
+
+// Hover state
+.btn:hover {
+  color: darken($grayLight, 30%);
+  background-color: $btnBackgroundHighlight;
+  border-color: darken($btnBorder, 8%);
+}
+
+// Active state
+.btn.active, .btn:active {
+  background-color: darken($white, 5%);
+  border-color: darken($btnBorder, 12%);
+  @include box-shadow(#{inset 0px 1px 2px rgba(0,0,0,0.2), 0px 1px 1px rgba(0,0,0,0.02)});
+  position: relative;
+  top: 1px;
+}
+
+// Disabled state
+.btn.disabled, .btn[disabled] {
+  cursor: default;
+  background-color: darken($white, 10%);
+  background-image: none;
+  border-color: rgba(0,0,0,0.1);
+  @include opacity(0.65);
+  @include box-shadow(none);
+}
+
+// Button Sizes
+// -------------------------------
+
+// Large
+.btn-large {
+  padding: 9px 18px;
+  @include border-radius(2px);
+}
+
+// Small
+.btn-small {
+  padding: 5px 9px;
+}
+
+// Mini
+.btn-mini {
+  padding: 2px 6px;
+}
+
+// Set text color
+// -------------------------------
+
+.btn-primary, .btn-primary:hover, .btn-secondary, .btn-secondary:hover,  .btn-warning, .btn-warning:hover, .btn-danger, .btn-danger:hover, .btn-success, .btn-success:hover, .btn-info, .btn-info:hover, .btn-inverse, .btn-inverse:hover {
+  color: $white;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+}
+
+// Extended: Rounded Button Style
+
+.btn.rounded {
+  @include border-radius(20px);
+  margin-right: 6px;
+}
+
+
+// Set the backgrounds
+// -------------------------------
+
+// Primary are used for Call to Actions
+.btn-primary {
+  @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+  border-color: $btnPrimaryBorder;
+  &:hover, &:active {
+    border-color: darken($btnPrimaryBorder,10%);
+  }
+}
+// Secondary are used for Call to Actions but of lesser value than Primary
+.btn-secondary {
+  @include buttonBackground($btnSecondaryBackground, $btnSecondaryBackgroundHighlight);
+  border-color: $btnSecondaryBorder;
+  &:hover, &:active {
+    border-color: darken($btnSecondaryBorder,10%);
+  }
+}
+
+// Tertiary
+.btn-tertiary {
+  background: $translucent;
+  border-color: $gray;
+  color: $grayLight;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.55);
+  &:hover, &:active {
+    background: $translucent;
+    border-color: $grayLight;
+    color: $grayLighter;
+  }
+}
+
+// Warning appears are orange
+.btn-warning {
+  @include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+  border-color: $btnWarningBorder;
+  &:hover, &:active {
+    border-color: darken($btnWarningBorder,8%);
+  }
+}
+// Danger and error appear as red
+.btn-danger {
+  @include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+  border-color: $btnDangerBorder;
+  &:hover, &:active {
+    border-color: darken($btnDangerBorder,5%);
+  }
+}
+// Success appears as green
+.btn-success {
+  @include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
+  border-color: $btnSuccessBorder;
+  &:hover, &:active {
+    border-color: darken($btnSuccessBorder,5%);
+  }
+}
+// Info appears as a neutral blue
+.btn-info {
+  @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+  border-color: $btnInfoBorder;
+  &:hover, &:active {
+    border-color: darken($btnInfoBorder,10%);
+  }
+}
+.btn-inverse {
+  @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+  border-color: $btnInverseBorder;
+  &:hover, &:active {
+    border-color: darken($btnInverseBorder,10%);
+  }
+}
+
+// Custom buttons
+// -------------------------------
+
+// Primary CTA
+.btn-primary.signin {
+  border: 1px solid $btnPrimaryBackground;
+  font-size: 18px;
+  font-weight: 400;
+  height: 27px;
+  line-height: 27px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:hover, &:active {
+    border-color: darken($btnPrimaryBorder,5%);
+  }
+
+  .icon-ctasignin {
+    background: image-url('icon_sprite.png') no-repeat;
+    height: 26px;
+    margin-top: -2px;
+    margin-right: 5px;
+    width: 26px;
+  }
+}
+
+// Extended Primary CTA
+.btn-primary.btn-large.signin {
+  font-size: 24px;
+  height: 68px;
+  line-height: 68px;
+  margin: 2px;
+  padding: 0;
+  position: relative;
+  text-indent: 50px;
+  width: 350px;
+  @include border-radius(3px);
+
+  .icon-ctasignin {
+    background-position: 0 -28px;
+    border-right: 1px solid #2174b4;
+    margin-top: 0;
+    height: 68px;
+    width: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &:after {
+      border-right: 1px solid #4293c7;
+      display: block;
+      content: "";
+      height: 68px;
+      width: 71px;
+    }
+  }
+
+  &:after {
+    border: 1px solid #ddd;
+    content: "";
+    display: block;
+    height: 74px;
+    left: -4px;
+    top: -4px;
+    position: absolute;
+    width: 356px;
+    @include border-radius(4px);
+  }
+
+  &:hover {
+    &:after {
+      border: 1px solid #cbcbcb;
+    }
+  }
+}
+
+// Extended Nav Bar Actions
+.btn-tertiary.navbar-actions {
+  background-color: rgba(255,255,255,0.08);
+  border-color: #444;
+  font-size: 18px;
+  height: 27px;
+  line-height: 27px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include border-radius(3px);
+
+  .icon {
+    opacity: .5;
+    position: relative;
+    top: 5px;
+  }
+
+  &:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: #666;
+
+    .icon {
+      opacity: 0.9;
+    }
+  }
+}
+
+.btn-tertiary.profile-link {
+  img {
+    width: 20px;
+    margin-right: 2px;
+    @include border-radius(3px);
+    @include box-shadow(#{0 0 3px rgba(255, 255, 255, 0.3)});
+  }
+}
+
+.btn-tertiary.navbar-actions.profile-link {
+  height: auto;
+  line-height: 0;
+  padding: 0;
+  img {
+    margin: 0;
+    width: 35px;
+  }
+}
+
+// Extended View All Tags button
+.btn-view-all-tags {
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding: 14px;
+  width: 100%;
+  @include border-radius(3px);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+  span {
+    font-weight: bold;
+  }
+
+  i {
+    position: relative;
+    top: 4px;
+  }
+}
+
+
+// Alert Styles
+// -------------------------------
+
+// Base alert styles
+.alert {
+
+  .close {
+    background: image-url('icon_sprite.png') no-repeat 0 -153px;
+    height: 12px;
+    opacity: 1;
+    text-indent: -9999px;
+    width: 12px;
+
+    &:hover {
+      background-position: 0 -165px;
+    }
+  }
+}
+
+// Alternate styles
+
+.alert{
+  color: $grayDark;
+}
+
+// Flash Message
+
+.flash-message {
+  position: relative;
+  text-align: center;
+  z-index: 100;
+
+  .alert {
+    margin-bottom: 0;
+    padding: 8px 0;
+    @include border-radius(0);
+    @include box-shadow(#{0 1px 1px rgba(0,0,0,0.1)});
+
+    .close {
+      background: rgba(0,0,0,0.2);
+      display: block;
+      height: 36px;
+      position: absolute;
+      text-indent: 0;
+      top: 0;
+      right: 0;
+      width: 40px;
+
+      .icon {
+        top: 10px;
+        position: relative;
+      }
+    }
+
+    .close {
+      &:hover {
+        background: rgba(0,0,0,0.4);
+      }
+    }
+  }
+}
+
+
+// Components: Nav
+// --------------------------------------------------
+
+// Tabs & Pills
+// -------------------------------
+
+// Common styles
+.nav-tabs > li > a, .nav-pills > li > a {
+  margin-right: 10px;
+}
+
+// Tabs
+.nav-tabs {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 14px;
+}
+// Make the list-items overlay the bottom border
+.nav-tabs > li {
+  margin-bottom: -1px;
+}
+// Actual tabs (as links)
+.nav-tabs > li > a {
+  color: $grayDark;
+  font-size: 18px;
+  font-weight: 300;
+  border: 0;
+  text-decoration: 0 1px 0 rgba(0,0,0,0.8);
+  @include border-radius(3px);
+  $transition: 0.22s;
+  @include transition($transition);
+
+  &:hover {
+    background-color: darken($grayLighter,10%);
+    border-color: 0;
+    //text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+  }
+}
+
+// Active state, and it's :hover to override normal :hover
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
+  background-color: $grayDark;
+  color: $white;
+  border: 0;
+  @include border-radius(3px);
+}
+
+
+// Pagination
+// -------------------------------
+.pagination {
+  border-top: 1px solid darken($grayLighter, 20%);
+  margin-bottom: 20px;
+  padding: 20px 15px;
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,0.8));
+
+  a {
+    border: 1px solid darken($grayLighter, 25%) !important;
+    border-left-width: 1px;
+    color: $gray;
+    margin-left: 3px;
+    margin-right: 3px;
+    @include border-radius(20px);
+    @include buttonBackground($btnBackground, $btnBackgroundHighlight);
+    text-shadow: 0 1px 0 rgba(255,255,255,1);
+    &:hover {
+      border: 1px solid darken($grayLighter, 45%) !important;
+      color: darken($grayDarker,20%);
+      @include buttonBackground(darken($btnBackground, 5%), darken($btnBackgroundHighlight, 5%));
+    }
+    &:active {
+      border: 1px solid $grayDark !important;
+      color: $black;
+    }
+  }
+  .prev a {
+    margin-left: 10px;
+  }
+  .next a {
+    margin-right: 10px;
+  }
+  .current {
+    background-color: $white;
+    border: 2px solid $gray;
+    color: $gray;
+    font-weight: bold;
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 0 14px;
+    line-height: 34px;
+    text-decoration: none;
+    @include border-radius(20px);
+  }
+  .gap {
+    float: left;
+    font-weight: bold;
+    line-height: 34px;
+    padding: 0 10px;
+  }
+}
+
+// Extend Bleeding Pagination Style
+// pagination w/c doesn't require padding on a widget content
+.pagination.bleed {
+  margin: -20px;
+}
+
+
+// Page Specific Style
+// -----------------------------------------------
+
+// Prelogin
+
+.home.pre-login {
+  padding-top: 0;
+
+  .navbar {
+    position: static;
+    .btn-navbar {
+      display: none;
+    }
+  }
+
+  .navbar-inner {
+    height: auto;
+    padding-top: 20px;
+    @include box-shadow(none);
+
+    .brand {
+      background: image-url('brand_prelogin.png') no-repeat;
+      height: 38px;
+      width: 160px;
+    }
+    .signin {
+      display: none;
+      margin-top: 0;
+    }
+  }
+
+  .main {
+    padding-top: 0;
+  }
+
+  .prod-intro {
+    background: image-url('bg_pixels.png') $grayDarker;
+  }
+
+  .discover {
+    //background: image-url('bg_main.png') repeat-x left -150px;
+    padding-top: 50px;
+  }
+
+  // Hero Unit
+  .hero-unit {
+    background: transparent;
+    height: auto;
+    margin-bottom: 0;
+    padding: 50px 0;
+    position: relative;
+
+    h1 {
+      color: $white;
+      font-size: 54px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 4px rgba(0,0,0,1);
+    }
+
+    h2 {
+      color: $grayLight;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      color: $grayLight;
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0px;
+      line-height: 22px;
+      text-shadow: 0 1px 4px rgba(0,0,0,1);
+    }
+
+    .btn.signin {
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+      padding-left:20px;
+      padding-right: 20px;
+      margin-top: 0;
+    }
+  }
+
+  // Extended with border and space
+  .hero-unit.bordered {
+    border-bottom: 1px solid #555;
+    padding: 80px 0 80px;
+    text-align: center;
+  }
+
+  // hero blocks
+  .blocks {
+    text-align: center;
+    padding: 0 30px;
+
+    .title {
+      color: $offWhite;
+      font-size: 22px;
+      font-weight: 400;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      text-shadow: 0 0 3px $black;
+    }
+
+    p {
+      color: darken($offWhite,20%);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+      text-shadow: 0 0 3px $black;
+    }
+
+    .icon {
+      background: image-url('icon_sprite.png') no-repeat transparent;
+      display: inline-block;
+      height: 96px;
+      width: 96px;
+    }
+
+    .icon.icon-discover {
+      background-position: -90px -11px;
+    }
+
+    .icon.icon-toolbox {
+      background-position: -90px -129px;
+    }
+
+    .icon.icon-kudos {
+      background-position: -90px -249px;
+    }
+  }
+
+  // Discover Title
+  .discover-title {
+    background: image-url('bg_hdot.png') repeat-x center center transparent;
+    border: 0;
+    text-align: center;
+
+    h2, .h2 {
+      background: image-url('bg_noise.png');
+      color: $white;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-shadow: 0 1px 0 $black;
+    }
+  }
+
+  .discover-title.pull-up {
+    margin-bottom: -110px;
+    position: relative;
+    top: -126px;
+  }
+
+}
+
+// Post Login
+
+.home.post-login {
+  .discover-title {
+    display: none;
+  }
+}

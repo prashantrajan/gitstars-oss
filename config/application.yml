@@ -1,0 +1,39 @@
+defaults: &defaults
+  app_name: "GitStars"
+  tag_autocomplete_results_limit: 15
+
+development:
+  <<: *defaults
+  host: "localhost:5000"
+  github:
+    client_id: "<CHANGEME>"
+    client_secret: "<CHANGEME>"
+  google_analytics:
+    web_property_id: "UA-xxxxxxx-DEVELOPMENT"
+
+test:
+  <<: *defaults
+  host: "test.host"
+  github:
+    client_id: "clientid"
+    client_secret: "clientsecret"
+  google_analytics:
+    web_property_id: "UA-xxxxxxx-TEST"
+
+staging:
+  <<: *defaults
+  host: "staging.gitstars.com"
+  github:
+    client_id: "<CHANGEME>"
+    client_secret: "<CHANGEME>"
+  google_analytics:
+    web_property_id: "UA-<CHANGEME>-xx"
+
+production:
+  <<: *defaults
+  host: "www.gitstars.com"
+  github:
+    client_id: "<CHANGEME>"
+    client_secret: "<CHANGEME>"
+  google_analytics:
+    web_property_id: "UA-<CHANGEME>-xx"

@@ -1,0 +1,17 @@
+- cache(['v1', 'home/_widget_public_activity'], :expires_in => 15.minutes) do
+  .widget.activity-feed
+    .widget-header
+      %h2 ACTIVITY
+    .widget-content
+      %ul.lists.bleed.bordered.narrow.hovered
+        - @recent_users.each do |user|
+          %li.list
+            .ui-block.activity-list
+              = link_to(user_path(user), :title => user.login, :class => 'ui-thumbnail') do
+                = image_tag(user.gravatar_url(:s => 24), :alt => user.login)
+              .ui-block-body
+                = link_to(user.login, user_path(user), :class => 'url')
+                -# %time= time_ago_in_words(user.created_at)
+                = link_to(user_tags_path(user), :class => 'stats') do
+                  %span.counter #{user.tags.count}
+                  tags

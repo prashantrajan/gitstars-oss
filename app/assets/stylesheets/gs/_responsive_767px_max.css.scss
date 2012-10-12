@@ -1,0 +1,469 @@
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+// For Retina Display Images
+// ----------------------------
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2) {
+
+  // Brand
+  .navbar {
+    .brand {
+      background: image-url('brand_2x.png') no-repeat;
+      height: 60px;
+      width: 125px;
+      -webkit-background-size: auto 60px ;
+      -moz-background-size: auto 60px ;
+      background-size: auto 60px ;
+    }
+  }
+
+  .home.pre-login {
+    .navbar {
+      .brand {
+        background: image-url('brand_2x.png') no-repeat !important;
+        height: 60px !important;
+        width: 125px !important;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  // Typography
+  .page-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  // Primary CTA
+  .btn-primary.signin {
+    height: 27px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    // hide font
+    font-size: 0;
+    line-height: 0;
+    .icon-ctasignin {
+      margin: 0;
+    }
+  }
+
+  // Extended Primary CTA
+  .btn-primary.btn-large.signin {
+    font-size: 24px;
+    height: 60px;
+    line-height: 60px;
+    width: 274px;
+
+    .icon-ctasignin {
+      background-position: -6px -28px;
+      height: 60px;
+      width: 56px;
+
+      &:after {
+        height: 60px;
+        width: 57px;
+      }
+    }
+
+    &:after {
+      height: 66px;
+      width: 280px;
+    }
+  }
+
+  // Extended UI Block - User Profile
+  .ui-block.profile-info {
+    .ui-thumbnail {
+      display: block;
+      float: none;
+      margin-bottom: 5px;
+      margin-right: 0;
+      img {
+        width: 100% !important;
+      }
+    }
+
+    .username {
+      font-size: 18px;
+      margin-bottom: 0px;
+      margin-top: 5px;
+    }
+
+    .fullname {
+      font-size: 12px;
+    }
+  }
+
+  // Extended User Details
+  .lists.user-details {
+    .list {
+      font-size: 12px;;
+    }
+  }
+
+  // Extended Repo List
+  .repo-lists {
+
+    .ui-thumbnail.repo-icon-types {
+      margin-right: 10px;
+      margin-top: 4px;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .repo-name, .repo-desc {
+    margin-right: 0;
+  }
+
+  .repo-counters.pos-right {
+    display: inline-block;
+    float: left;
+    position: static;
+    margin-bottom: 10px;
+
+    li {
+      display: inline-block;
+      float: left;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+
+  // Repo Alt Actions
+
+  .repo-alt-actions {
+    border-top: 0;
+    display: inline-block;
+    padding-left: 5px;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .repo-alt-actions.pull-right {
+    @include clearfix();
+    display: block;
+    float: none;
+    margin-left: 0;
+  }
+
+  // Core tag style
+  ul.tags, ol.tags {
+    a {
+      font-size: 12px;
+      strong {
+        padding: 2px 4px;
+      }
+      em {
+        padding: 2px 4px;
+      }
+      &:before {
+        right: -6px;
+        top: 9px;
+      }
+      // triangle
+      &:after {
+        border-width:12px;
+        right: -24px;
+      }
+    }
+  }
+
+  // Prelogin Hero Unit
+  .home.pre-login {
+    .hero-unit {
+      .btn-primary.signin {
+        display: block;
+      }
+    }
+  }
+
+}
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 767px) {
+
+  // Body and structure
+  body {
+    padding-top: 0;
+  }
+
+  // Navbar
+  .navbar-fixed-top {
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .navbar-inner .btn-primary.signin {
+    color: transparent;
+  }
+
+  .main {
+    //background: #e9e9e9;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  // Product Intro
+  .prod-intro {
+    height: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:before {
+      height: auto;
+    }
+  }
+
+  // Hero Unit
+  .hero-unit {
+    padding: 30px 20px 40px;
+  }
+
+  .hero-unit.blurbs {
+    display: none;
+  }
+
+  // Prelogin Hero Unit
+  .home.pre-login {
+    .navbar {
+      .brand {
+        background: image-url('brand.png') no-repeat;
+        height: 60px;
+        width: 125px;
+      }
+    }
+
+    .navbar-fixed-top .navbar-inner {
+      padding: 10px 20px;
+    }
+
+    .hero-unit {
+      height: auto;
+      padding-bottom: 120px;
+
+      p {
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: 32px;
+        letter-spacing: 0;
+        margin-bottom: 30px;
+      }
+      .lead {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30px;
+      }
+      .btn {
+        float: none;
+      }
+    }
+
+    .hero-unit.bordered {
+      padding-top: 50px;
+    }
+
+    // Offset spaces on the side
+    .discover {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  // Footer
+
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .pull-right {
+      float: none;
+      text-align: left;
+    }
+
+    .brand {
+      margin-top: 10px;
+    }
+  }
+
+  // Extended: Filter-repos
+  .widget.filter-repos {
+    .btn {
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+
+  // Extended UI Block - User Profile
+  .ui-block.profile-info {
+    .ui-thumbnail {
+      img {
+        width: 60px;
+      }
+    }
+
+    .username {
+      font-size: 22px;
+      margin-bottom: 2px;
+      margin-top: 10px;
+    }
+
+    .fullname {
+      font-size: 14px;
+    }
+  }
+
+  // Extended User Details
+  .lists.user-details {
+    .list {
+      font-size: 13px;;
+    }
+  }
+
+
+  // Kudos
+  // -------------------------------
+
+  // Temporary Kudos Placeholder
+  .kudos {
+    .fixed {
+      text-align: center;
+    }
+  }
+
+
+  // Alert Styles
+  // -------------------------------
+
+  // Flash Message
+  .flash-message {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  // Pagination
+  // -------------------------------
+  .pagination {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    span {
+      display: inline-block;
+      width: auto;
+    }
+    .page {
+      display: none;
+    }
+    a {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .prev a, .next a, .first a, .last a {
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+    .first a {
+      margin-left: 0;
+    }
+    .last a {
+      margin-right: 0;
+    }
+  }
+
+  // Extended: Mega Search Form
+  // ------------------------------
+  .mega-search {
+    padding: 10px;
+  }
+
+  .form-search {
+    .search-query {
+      //color: $grayLighter;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 25px 10px;
+      width: 100%;
+    }
+    .btn-search {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 10px 0 0;
+      padding: 13px 30px;
+      width: 100%;
+    }
+
+    // Extended for jQuery Token Input
+    ul.token-input-list-gitstars {
+      float: none;
+      margin: 0;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+  }
+
+  // Extended: Mini Search
+  // ------------------------------
+  .navbar {
+    .mini-search {
+      display: block;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+
+      .form-search {
+        border-right: 0;
+        margin: 10px 0 10px;
+        padding-right: 0;
+        border-left: 0;
+        padding-left: 0;
+        .btn-search {
+          right: 0;
+        }
+        // Extended for jQuery Token Input
+        ul.token-input-list-gitstars {
+          width: 100%;
+          -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+        }
+      }
+    }
+
+    .navbar-actions {
+      .txt {
+        display: inline-block;
+        text-indent: -9999px;
+      }
+      .icon-off {
+        left: -2px;
+      }
+    }
+  }
+
+}

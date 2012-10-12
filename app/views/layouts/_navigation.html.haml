@@ -1,0 +1,27 @@
+- if render_nav_search?
+  %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+
+%h1
+  = link_to 'GitStars', root_path, :class => 'brand'
+
+-#- if user_signed_in?
+-#  %nav.pull-right
+-#    = link_to(user_path(current_user), :title => "#{current_user.login}'s Profile", :class => 'btn btn-tertiary navbar-actions profile-link') do
+-#      = image_tag(current_user.gravatar_url(:s => 35), :alt => current_user.login)
+-#
+-#    = link_to(destroy_user_session_path, :method => :delete, :title => 'Sign Out', :class => 'btn btn-tertiary navbar-actions') do
+-#      %span.txt Logout
+-#      %i.icon.icon-off.icon-white
+-#
+-#- else
+-#  = link_to_github_signin(:class => 'btn btn-primary signin pull-right') do
+-#    %i.icon.icon-sprite.icon-ctasignin
+-#    Sign In
+
+- if render_nav_search?
+  .nav-collapse.collapse
+    .mini-search.pull-left
+      = render 'tags/search_form'

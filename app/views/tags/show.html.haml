@@ -1,0 +1,42 @@
+- title_str =  @user.present? ? "#{@user.login} / #{@tag.name}" : @tag.name
+- page_title title_str
+- page_meta_title title_str
+
+- meta_tags do
+  = meta_tag_for_keywords(@tag.name)
+
+
+%header
+  .container
+    %h1.page-title
+      - if @user.present?
+        = link_to(user_path(@user), :title => "Back to #{@user.login}'s profile") do
+          %span= @user.login
+        %span.divider /
+        = link_to(t(:tags), user_tags_path(@user), :title => "Back to #{@user.login}'s tags")
+        %span.divider /
+        %span.last-tag= @tag.name
+      - else
+        %span.txt= @tag.name
+
+%section.user-lists
+  .container
+    .row
+      .span9
+        .widget
+          .widget-header
+            %h2
+              REPOSITORIES
+              %em (xx)
+          .widget-content
+            = render('repos/list', :repos => @repos, :page_owner => @user)
+        = paginate(@repos)
+
+      .span3
+        - if @user.present?
+          = render 'users/widget_profile_info', :user => @user
+          = link_to(tag_path(@tag), :class => 'btn btn-large btn-view-all-tags') do
+            see all tagged
+            %span #{@tag.name}
+            %i.icon.icon-chevron-right
+        = render 'tags/widget_related_tags'
