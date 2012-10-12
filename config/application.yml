@@ -22,7 +22,7 @@ test:
 
 staging:
   <<: *defaults
-  host: "staging.gitstars.com"
+  host: "staging.<CHANGEME>.com"
   github:
     client_id: "<CHANGEME>"
     client_secret: "<CHANGEME>"
@@ -31,7 +31,7 @@ staging:
 
 production:
   <<: *defaults
-  host: "www.gitstars.com"
+  host: "www.<CHANGEME>.com"
   github:
     client_id: "<CHANGEME>"
     client_secret: "<CHANGEME>"

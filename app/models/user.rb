@@ -100,6 +100,7 @@ class User < ActiveRecord::Base
     options.stringify_keys!
     size = options['s'] || 32
 
+    # CHANGEME: the hostname for 'd' option
     options = {
       's' => size,
       'd' => "http://www.gitstars.com/assets/gs_avatar_#{size}.png"

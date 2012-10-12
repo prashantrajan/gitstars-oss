@@ -92,7 +92,7 @@ Gitstars::Application.configure do
   # ExceptionNotifier
   config.middleware.use ExceptionNotifier,
     :email_prefix => '[Staging] ',
-    :sender_address => 'GitStars Staging Exceptions <CHANGEME@gitstars.com>',
+    :sender_address => 'GitStars Staging Exceptions <CHANGEME@example.com>',
     :exception_recipients => 'CHANGEME@example.com'
 
 end
