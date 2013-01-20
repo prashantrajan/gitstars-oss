@@ -1,3 +1,6 @@
+![GitStars Screenshot](https://raw.github.com/prashantrajan/gitstars-oss/master/app/assets/images/gitstars_screenshot_full_v2.png)
+
+
 Development
 ============
 
@@ -33,9 +36,3 @@ IMPORTANT
 =========
 
 * Search and replace CHANGEME within codebase
-
-
-Screenshot
-==========
-
-![GitStars Screenshot](https://raw.github.com/prashantrajan/gitstars-oss/master/app/assets/images/gitstars_screenshot_full.png)

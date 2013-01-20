@@ -258,13 +258,13 @@ describe User do
 
   describe "#gravatar_url" do
     let!(:user) { FactoryGirl.create(:user) }
-    let(:base_default_avatar_url) { "http://www.gitstars.com/assets" }
+    let(:base_default_avatar_url) { "https://raw.github.com/prashantrajan/gitstars-oss/master/app/assets/images" }
 
     context "no custom options are sent" do
       it "returns a gravatar url with a default image size of 32" do
         size = 32
         options = {
-          :d => "http://www.gitstars.com/assets/gs_avatar_#{size}.png",
+          :d => "#{base_default_avatar_url}/gs_avatar_#{size}.png",
           :s => size
         }
 
@@ -277,7 +277,7 @@ describe User do
         size = 24
 
         options = {
-          :d => "http://www.gitstars.com/assets/gs_avatar_#{size}.png",
+          :d => "#{base_default_avatar_url}/gs_avatar_#{size}.png",
           :s => size
         }
 

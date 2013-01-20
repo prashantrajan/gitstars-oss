@@ -103,7 +103,7 @@ class User < ActiveRecord::Base
     # CHANGEME: the hostname for 'd' option
     options = {
       's' => size,
-      'd' => "http://www.gitstars.com/assets/gs_avatar_#{size}.png"
+      'd' => "https://raw.github.com/prashantrajan/gitstars-oss/master/app/assets/images/gs_avatar_#{size}.png"
     }.merge(options)
 
     "http://www.gravatar.com/avatar/#{gravatar_id}?#{options.to_query}"
